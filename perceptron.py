@@ -2,7 +2,7 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 
-# Variables to store training results
+
 error_norm_epochs = []
 weight_evolution = []
 initial_weights = None
@@ -40,7 +40,6 @@ def train_perceptron(learning_rate, epochs, file_path, progress_bar):
         weights += learning_rate * (x_columns.T @ errors)
         weights = np.round(weights, 4)
 
-        # Update the progress bar
         progress_bar['value'] = (epoch + 1) / epochs * 100
         progress_bar.update()
 
